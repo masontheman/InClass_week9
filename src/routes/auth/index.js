@@ -8,4 +8,11 @@ MainAuthRouter.route('/register')
     res.send('Post Auth router Register');
 })
 
+MainAuthRouter.route('/login')
+.get((req,res) => {
+    res.render('login');
+})
+.post((req,res) => {
+    res.send('post login page');
+})
 module.exports = MainAuthRouter
