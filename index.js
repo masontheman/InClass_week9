@@ -1,7 +1,12 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
+const { connectDB } = require('./src/db');
+
+connectDB();
 
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname,'src/templates/views'));
@@ -18,3 +23,6 @@ initRoutes(app);
 app.listen(port, ()=> {
     console.log(`Server is listening on port ${port}`);
 });
+
+
+// jVSTvKUaF0B6Nshc
